@@ -56,15 +56,11 @@ const Hero: React.FC = () => {
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-luxury-black to-transparent z-10 hidden md:block pointer-events-none"></div>
 
         {/* Image Container */}
-        <div className="absolute inset-0 w-full h-full z-0">
+        <div className="absolute inset-0 w-full h-full">
             <FadeIn delay={800} className="w-full h-full">
                 <img 
                   src={ASSETS.hero.src} 
                   alt={ASSETS.hero.alt}
-                  onError={(e) => {
-                    console.error("Image loading failed:", e);
-                    e.currentTarget.style.display = 'none'; // Optional: hide if broken
-                  }}
                   className="w-full h-full object-cover object-center opacity-90 grayscale contrast-125 hover:grayscale-0 hover:contrast-100 transition-all duration-[2000ms] ease-out"
                 />
             </FadeIn>
